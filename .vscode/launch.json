@@ -8,7 +8,7 @@
             "name": "Python",
             "type": "python",
             "request": "launch",
-            "program": "reader.py",
+            "program": "example.py",
             "console": "integratedTerminal"
         }
     ]

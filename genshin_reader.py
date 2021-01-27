@@ -1,4 +1,3 @@
-import numpy as np
 import cv2 as cv
 
 def isolate_slots(img_path: str, rows: int, cols: int):
@@ -36,10 +35,3 @@ class InventoryImage:
         return winname
 
 
-images = [InventoryImage("gi.png", 4, 7), InventoryImage("gi2.png", 4, 7),
-          InventoryImage("gi5by2.png", 2, 5), InventoryImage("gi720p.png", 4, 7)]
-
-for invImg in images:
-    winname = invImg.display_highlighted_slots()
-    cv.waitKey(0)
-    cv.destroyWindow(winname)
