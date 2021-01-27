@@ -2,8 +2,12 @@
 Playing around with Computer Vision and Genshin Impact Inventories.
 Something to highlight inventory slots from a Genshin Impact Inventory
 
+Uses pytesseract and opencv-python
+
 #### Current Limitations:
 - Requires the number of columns and rows to be known
+- Resolution can affect results
+- Not always accurate
 
 ## Example:
 ### Example Input Image: 
