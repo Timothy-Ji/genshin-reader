@@ -1,6 +1,6 @@
 # Genshin Impact Inventory Reader
 Playing around with Computer Vision and Genshin Impact Inventories.
-Something to highlight inventory slots and try to read the quantities from a Genshin Impact Inventory
+Something to try to read the quantities from a Genshin Impact Inventory
 
 Uses pytesseract and opencv-python
 
