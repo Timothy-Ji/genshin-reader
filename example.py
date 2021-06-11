@@ -8,7 +8,6 @@ lower = np.array([target[0]-p_range, target[1]-p_range, target[2]-p_range])
 upper = np.array([target[0]+p_range, target[1]+p_range, target[2]+p_range])
 
 img = cv.imread("example\gi.png")
-img = cv.resize(img, (img.shape[1]*2, img.shape[0]*2), interpolation=cv.INTER_NEAREST)
 
 mask = cv.inRange(img, lower, upper)
 filtered = cv.bitwise_and(img, img, mask=mask)
@@ -28,7 +27,6 @@ for i, contour in enumerate(contours):
         if no == '':
             pass
         cv.putText(img, no, (x, y), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv.LINE_AA, False)
-img = cv.resize(img, (int(img.shape[1]/2), int(img.shape[0]/2)), interpolation=cv.INTER_NEAREST)
+        
 cv.imshow("Image", img)
-
 cv.waitKey(0)
