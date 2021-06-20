@@ -5,11 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python",
+            "name": "Python: Launch",
             "type": "python",
             "request": "launch",
-            "program": "example.py",
-            "console": "integratedTerminal"
+            "program": "genshinreader.py",
+            "args": ["..\\example\\gi.png", "1080"],
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}\\src"
         }
     ]
 }

@@ -1,0 +1,8 @@
+{
+  "version": "genshinreader:1.0",
+  "items": [{
+      "img": "charexp-3.png",
+      "out": "adventurers-experience"
+    }
+  ]
+}
