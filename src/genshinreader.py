@@ -41,6 +41,11 @@ scale = 1080/res
 img = cv.resize(img, (int(img.shape[1]*scale), int(img.shape[0]*scale)))
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+templates = {}
+for item in item_list:
+    templates[item] = cv.imread("items\\" + item, cv.IMREAD_GRAYSCALE)
+
 for item in item_list:
     name = namingdata[item]
     print(name)
@@ -64,7 +69,7 @@ for item in item_list:
         if (len(numberl) > 0):
             num = numberl[0]
 
-        wrapped_name = textwrap.wrap(item + ' ' + str(num), width=15)
+        wrapped_name = textwrap.wrap(name + ' ' + str(num), width=14)
         font = cv.FONT_HERSHEY_SIMPLEX
         font_size = 0.5
         font_thickness = 1
