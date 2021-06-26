@@ -73,9 +73,9 @@ def find_matches(item_list, include_failed):
     return matched
 
 
-print("Engine:Version=" + readerdata['version'])
-print("Item List:Version=" + itemdata['version'])
-print("Naming Scheme:Version=" + namingdata['scheme'])
+print("Engine Version=" + readerdata['version'])
+print("List Version=" + itemdata['version'])
+print("Naming Scheme=" + namingdata['scheme'])
 
 img = cv.imread(input_img)
 
