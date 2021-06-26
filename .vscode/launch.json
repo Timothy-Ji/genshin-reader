@@ -5,11 +5,40 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python",
+            "name": "Python: Launch (Example 1)",
             "type": "python",
             "request": "launch",
-            "program": "example.py",
-            "console": "integratedTerminal"
+            "program": "genshinreader.py",
+            "args": ["..\\example\\gi.png"],
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}\\src"
+        },
+        {
+            "name": "Python: Launch (Example 2)",
+            "type": "python",
+            "request": "launch",
+            "program": "genshinreader.py",
+            "args": ["..\\example\\gi2.png"],
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}\\src"
+        },
+        {
+            "name": "Python: Launch (Example 3)",
+            "type": "python",
+            "request": "launch",
+            "program": "genshinreader.py",
+            "args": ["..\\example\\gi720p.png", "-r", "720"],
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}\\src"
+        },
+        {
+            "name": "Python: Launch (Example 4)",
+            "type": "python",
+            "request": "launch",
+            "program": "genshinreader.py",
+            "args": ["..\\example\\gi5by2.png"],
+            "console": "integratedTerminal",
+            "cwd":"${workspaceFolder}\\src"
         }
     ]
 }
