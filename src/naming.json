@@ -1,5 +1,5 @@
 {
-  "scheme": "genshinreader:0.1",
+  "scheme": "default:0.1",
   "charexp-4.jpg": "heros-wit",
   "charexp-3.jpg": "adventurers-experience",
   "charexp-2.jpg": "wanderers-advice",
@@ -29,5 +29,11 @@
   "mistgrass-2.jpg": "mistgrass-pollen",
   "sacknife-4.jpg": "inspectors-sacrificial_knife",
   "sacknife-3.jpg": "agents-sacrificial_knife",
-  "sacknife-2.jpg": "hunters-sacrificial_knife"
+  "sacknife-2.jpg": "hunters-sacrificial_knife",
+  "fatuiinsignia-3.jog":"lieutenants-insignia",
+  "fatuiinsignia-2.jog":"sergeants-insignia",
+  "fatuiinsignia-1.jog":"recruits-insignia",
+  "thinsignia-3.jog":"golden_raven-insignia",
+  "thinsignia-2.jog":"silver_raven-insignia",
+  "thinsignia-1.jog":"treasure_hoarder-insignia"
 }
