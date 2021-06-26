@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "program": "genshinreader.py",
-            "args": ["..\\example\\gi.png", "1080"],
+            "args": ["..\\example\\gi.png"],
             "console": "integratedTerminal",
             "cwd":"${workspaceFolder}\\src"
         },
@@ -18,7 +18,7 @@
             "type": "python",
             "request": "launch",
             "program": "genshinreader.py",
-            "args": ["..\\example\\gi2.png", "1080"],
+            "args": ["..\\example\\gi2.png"],
             "console": "integratedTerminal",
             "cwd":"${workspaceFolder}\\src"
         },
@@ -27,7 +27,7 @@
             "type": "python",
             "request": "launch",
             "program": "genshinreader.py",
-            "args": ["..\\example\\gi720p.png", "720"],
+            "args": ["..\\example\\gi720p.png", "-r", "720"],
             "console": "integratedTerminal",
             "cwd":"${workspaceFolder}\\src"
         },
@@ -36,7 +36,7 @@
             "type": "python",
             "request": "launch",
             "program": "genshinreader.py",
-            "args": ["..\\example\\gi5by2.png", "1080"],
+            "args": ["..\\example\\gi5by2.png"],
             "console": "integratedTerminal",
             "cwd":"${workspaceFolder}\\src"
         }
