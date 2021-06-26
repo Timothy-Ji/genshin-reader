@@ -89,4 +89,6 @@ matches = find_matches(item_list, inc_failed)
 end = time.time()
 print("Time Elapsed (s):", end-start)
 
-print(matches)
+output = {"engine-version": readerdata['version'], "list-version": itemdata['version'], "naming-scheme": namingdata['scheme'], "materials": {} }
+output['materials'] = matches
+print(output)
