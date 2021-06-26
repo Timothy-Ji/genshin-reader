@@ -2,12 +2,24 @@
 Playing around with Computer Vision and Genshin Impact Inventories.
 Something to read a Genshin Impact Inventory image and output a JSON.
 
-Uses easyocr and opencv-python
+Uses `easyocr` and `opencv-python`
 
 #### Current Limitations:
 - Resolution can affect results (built for 16:9 1080p inventory images)
 - Not always accurate, and if a material is found, but if quantity can not be read, it can return it with a `-1`.
 - Only supporting 36 materials right now, but easily extensible.
+
+## Usage:
+`python3 genshinreader.py <image_path>`
+### Optional arguments:
+#### Resolution:
+- Resolution of image items relative to actual game resolution.
+- Usage:  `-r`/`--res` `<resolution>`
+- Default: `1080`
+#### Include Failed:
+- Whether to include `material: quantity` where the quantity could not be read.
+- Usage: `-if`/`--include-failed` `<include_failed>`
+- Default: `True`
 
 ## Example:
 ### Example Input Image: 
