@@ -72,13 +72,15 @@ def find_matches(img_gray, item_list, include_failed):
                 matched[name] = quantity
     return matched
 
-def match(img, res, include_failed):
+def get_output(img, res, include_failed):
     scale = 1080/res
 
     img = cv.resize(img, (int(img.shape[1]*scale), int(img.shape[0]*scale)))
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     matches = find_matches(gray, item_list, include_failed)
-    return matches
+    output = {"engine-version": readerdata['version'], "list-version": itemdata['version'], "naming-scheme": namingdata['scheme'], "materials": {} }
+    output['materials'] = matches
+    return output
     
 
 print("Engine Version=" + readerdata['version'])
@@ -87,11 +89,9 @@ print("Naming Scheme=" + namingdata['scheme'])
 
 img = cv.imread(input_img)
 
-matches = match(img, res, inc_failed)
+output = get_output(img, res, inc_failed)
 
 end = time.time()
 print("Time Elapsed (s):", end-start)
 
-output = {"engine-version": readerdata['version'], "list-version": itemdata['version'], "naming-scheme": namingdata['scheme'], "materials": {} }
-output['materials'] = matches
 print(output)
