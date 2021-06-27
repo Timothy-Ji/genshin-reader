@@ -43,7 +43,7 @@ def find(img, look_for, threshold: float):
     result = cv.matchTemplate(img, look_for, cv.TM_CCOEFF_NORMED)
     _, max_val, _, max_loc = cv.minMaxLoc(result)
     if max_val >= threshold:
-        return max_loc
+        return {'loc': max_loc, 'val': max_val}
     return None
 
 
@@ -55,22 +55,29 @@ def get_quantity(img) -> int:
 
 
 def find_matches(img_gray, item_list, include_failed):
+    best = {}
     matched = {}
     for i, item in enumerate(item_list):
         name = get_name(item)
-        print(f'{int((i+1)/len(item_list)*100)}% | {i+1}/{len(item_list)}')
+        print(f'{int((i+1)/len(item_list)*100)}% | {i+1}/{len(item_list)} | {name}')
         template = cv.imread("items\\" + item, cv.IMREAD_GRAYSCALE)
         match = find(img_gray, template, 0.9)
         if match:
+            print (match)
             h, w = template.shape
-            top_left = match
+            top_left = match['loc']
             bottom_right = (top_left[0] + w, top_left[1] + h)
             quantity_segment = img_gray[bottom_right[1] -
-                                    int(h*4/5):bottom_right[1], top_left[0]:bottom_right[0]]
+                                        int(h*4/5):bottom_right[1], top_left[0]:bottom_right[0]]
             quantity = get_quantity(quantity_segment)
             if quantity != -1 or include_failed:
-                matched[name] = quantity
+                if top_left not in best or match['val'] > best[top_left][0]:
+                    matched[name] = quantity
+                    if top_left in best:
+                        del matched[best[top_left][1]]
+                    best[top_left] = [match['val'], name]
     return matched
+
 
 def get_output(img, res, include_failed):
     scale = 1080/res
@@ -78,10 +85,11 @@ def get_output(img, res, include_failed):
     img = cv.resize(img, (int(img.shape[1]*scale), int(img.shape[0]*scale)))
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     matches = find_matches(gray, item_list, include_failed)
-    output = {"engine-version": readerdata['version'], "list-version": itemdata['version'], "naming-scheme": namingdata['scheme'], "materials": {} }
+    output = {"engine-version": readerdata['version'], "list-version": itemdata['version'],
+              "naming-scheme": namingdata['scheme'], "materials": {}}
     output['materials'] = matches
     return output
-    
+
 
 print("Engine Version=" + readerdata['version'])
 print("List Version=" + itemdata['version'])
