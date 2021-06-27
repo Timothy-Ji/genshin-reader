@@ -77,7 +77,7 @@ def match(img, res, include_failed):
 
     img = cv.resize(img, (int(img.shape[1]*scale), int(img.shape[0]*scale)))
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-    matches = find_matches(gray, item_list, inc_failed)
+    matches = find_matches(gray, item_list, include_failed)
     return matches
     
 
