@@ -63,7 +63,6 @@ def find_matches(img_gray, item_list, include_failed):
         template = cv.imread("items\\" + item, cv.IMREAD_GRAYSCALE)
         match = find(img_gray, template, 0.9)
         if match:
-            print (match)
             h, w = template.shape
             top_left = match['loc']
             bottom_right = (top_left[0] + w, top_left[1] + h)
