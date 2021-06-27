@@ -1,5 +1,5 @@
 {
-  "version": "genshinreader:0.2.0",
+  "version": "genshinreader:0.2.1",
   "items": [
     "charexp-4.jpg",
     "charexp-3.jpg",
@@ -36,6 +36,15 @@
     "fatuiinsignia-1.jpg",
     "thinsignia-3.jpg",
     "thinsignia-2.jpg",
-    "thinsignia-1.jpg"
+    "thinsignia-1.jpg",
+    "dvalin-claw.jpg",
+    "dvalin-plume.jpg",
+    "dvalin-sigh.jpg",
+    "andrius-locket.jpg",
+    "andrius-ring.jpg",
+    "andrius-tail.jpg",
+    "tartaglia-tusk.jpg",
+    "tartaglia-shard.jpg",
+    "tartaglia-shadow.jpg"
   ]
 }

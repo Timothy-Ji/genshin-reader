@@ -1,5 +1,5 @@
 {
-  "scheme": "default:0.2.0",
+  "scheme": "default:0.2.1",
   "map": {
     "charexp-4.jpg": "heros-wit",
     "charexp-3.jpg": "adventurers-experience",
@@ -36,6 +36,15 @@
     "fatuiinsignia-1.jpg":"recruits-insignia",
     "thinsignia-3.jpg":"golden_raven-insignia",
     "thinsignia-2.jpg":"silver_raven-insignia",
-    "thinsignia-1.jpg":"treasure_hoarder-insignia"
+    "thinsignia-1.jpg":"treasure_hoarder-insignia",
+    "dvalin-claw.jpg":"dvalins-claw",
+    "dvalin-plume.jpg":"dvalins-claw",
+    "dvalin-sigh.jpg":"dvalins-sigh",
+    "andrius-locket.jpg":"tail_of-boreas",
+    "andrius-ring.jpg":"ring_of-boreas",
+    "andrius-tail.jpg":"spirit_locket_of-boreas",
+    "tartaglia-tusk.jpg":"tusk_of_monoceros_caeli",
+    "tartaglia-shard.jpg":"shard_of_a_foul_legacy",
+    "tartaglia-shadow.jpg":"shadow_of_the_warrior"
   }
 }
