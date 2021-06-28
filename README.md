@@ -8,6 +8,14 @@ Uses `easyocr` and `opencv-python`
 - Resolution can affect results (built for 16:9 1080p inventory images)
 - Not always accurate, and if a material is found, but if quantity can not be read, it can return it with a `-1`.
 - Only supporting 36 materials right now, but easily extensible.
+<hr/>
+
+## Want to help add materials?
+Submit a pull request with the additions and use 124x152 images for the materials. 
+See the current images for an example on what they should look like. 
+Also add to the items.json and naming.json files.
+
+<hr/>
 
 ## Usage:
 `python3 genshinreader.py <image_path>`
