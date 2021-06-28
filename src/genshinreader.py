@@ -67,7 +67,7 @@ def find_matches(img_gray, item_list, include_failed):
             top_left = match['loc']
             bottom_right = (top_left[0] + w, top_left[1] + h)
             quantity_segment = img_gray[bottom_right[1] -
-                                        int(h*4/5):bottom_right[1], top_left[0]:bottom_right[0]]
+                                        int(h*1/5):bottom_right[1], top_left[0]:bottom_right[0]]
             quantity = get_quantity(quantity_segment)
             if quantity != -1 or include_failed:
                 if top_left not in best or match['val'] > best[top_left][0]:
